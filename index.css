@@ -1,0 +1,236 @@
+@keyframes writing {
+    40%, 60% {
+        left: calc(100% + 4px);
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.container {
+    overflow: hidden;
+}
+
+.fixed {
+    position: fixed;
+  }
+.sec-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0a192f;
+    border-left: 4px solid #ffd700;
+    animation: writing 7s steps(14) infinite;
+
+}
+/* ----------------------------------------------------------------- */
+#shiv #ans #hi::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    transition: 2s;
+    border-right: 7px solid var(--clr);
+    border-radius: 5px;
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+#shiv #ans #hi:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+
+#shiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+#shiv #ans{
+    list-style: none;
+    position: relative;
+}
+
+#shiv #ans #hi{
+    position: relative;
+    font-size: 3.5em;
+    text-decoration: none;
+    line-height: 1.2em;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------------------------------------------------- */
+
+@media only screen and (max-width: 768px){
+
+    #shiv{
+        font-size: 12px;
+    }
+
+    #kesh{
+        font-size: 32px;
+    }
+
+    .rotate-90 {
+        transform: rotate(90deg);
+    }
+}
+
+/* ---------------------------------------------------------- */
+
+#box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#ffd700 0%,#ffd700 5%,transparent 5%, transparent 40%, #ffd700 50%);
+    animation: loop 4s linear infinite;
+    border-radius: 20px;
+    margin-top: 35px;
+}
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+
+}
+
+@keyframes loop{
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+}
+
+#box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#fff 0%,#fff 5%,transparent 5%, transparent 40%, #fff 50%);
+    animation: loop 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+}
+
+
+#box::after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #0a192f;
+    border-radius: 15px;
+    border: 8px solid #0a192f;
+    background-image: url(./images/WhatsApp_Image_2024-06-08_at_6.56.51_PM-removebg-preview.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------------------------------------------------------- */
+
+
+#pro{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#ffd700 0%,#ffd700 5%,transparent 5%, transparent 40%, #ffd700 50%);
+    animation: loop 4s linear infinite;
+    border-radius: 20px;
+    margin-top: 35px;
+}
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+
+}
+
+@keyframes lo{
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+}
+
+#pro::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#fff 0%,#fff 5%,transparent 5%, transparent 40%, #fff 50%);
+    animation: lo 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+}
+
+
+#pro::after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #0a192f;
+    border-radius: 15px;
+    border: 8px solid #0a192f;
+    background-image: url(./images/discord.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------------------------------------------------------- */
+
+.rotating-border {
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    border-radius: 50%;
+    border: 5px dashed #ffd700; /* Border style */
+    position: relative;
+    animation: rotate 10s linear infinite; /* Animation duration */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Fixed image styling */
+.fixed-image {
+    position: absolute;
+    width: 80%; /* Adjust as needed */
+    height: auto;
+}
+/* Add keyframes for rotation */
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Style for the rotating border */
+  #roo {
+    animation: rotate 10s linear infinite; /* Adjust the duration as needed */
+  }
+  
+  #fixedImage {
+    position: fixed; /* Ensure the image is positioned correctly */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+  }
+  
