@@ -195,42 +195,11 @@
 
 /* ---------------------------------------------------------- */
 
-.rotating-border {
-    width: 300px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
-    border-radius: 50%;
-    border: 5px dashed #ffd700; /* Border style */
-    position: relative;
-    animation: rotate 10s linear infinite; /* Animation duration */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#roo{
+    animation: ruu 20s linear infinite;
 }
-/* Fixed image styling */
-.fixed-image {
-    position: absolute;
-    width: 80%; /* Adjust as needed */
-    height: auto;
-}
-/* Add keyframes for rotation */
-@keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+
+@keyframes ruu {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
-  
-  /* Style for the rotating border */
-  #roo {
-    animation: rotate 10s linear infinite; /* Adjust the duration as needed */
-  }
-  
-  #fixedImage {
-    position: fixed; /* Ensure the image is positioned correctly */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the image */
-  }
-  
