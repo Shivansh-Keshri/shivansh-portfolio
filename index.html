@@ -8,7 +8,40 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head> 
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Custom styles for the navbar to ensure it fits within the screen width */
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            flex: 1;
+            min-width: 50px; /* Ensures each item is at least 50px wide */
+        }
+
+        /* Media query to adjust the elements for smaller screens */
+        @media (max-width: 640px) {
+            .flex-col {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
 <body class="w-full">
     <!-- HEADER -->
     <div class="w-full h-20 px-4 bg-[#0a192f]">
@@ -17,12 +50,11 @@
                 <img src="./images/letter-s.png" alt="S" class="w-10 h-10">
                 <img src="./images/letter-k.png" alt="K" class="w-10 h-10">
             </div>
-            <nav class="text-base lg:pr-32 sm:pr-5 md:pr-8">
+            <nav class="text-base lg:pr-32 sm:pr-5 md:pr-8 w-full">
                 <ul class="flex lg:gap-8 sm:gap-2 text-[#fff]">
                     <li>
                         <a href="#Home" class="font-bold flex justify-center items-center gap-1 relative text-[#fff] text-base hover:text-[#ffd700] hover:after:w-full after:absolute after:bg-[#ffd700] after:h-[4.5px] after:w-0 after:left-0 after:bottom-[-8px] after:duration-500 after:rounded-full">
-                            <!-- <i class="bi bi-house-down-fill text-[#fff] hover:text-[#ffd700]"> Home</i> -->
-                             <img src="./images/icons8-home-48.png" alt="Home" class="w-6 h-6">Home
+                            <img src="./images/icons8-home-48.png" alt="Home" class="w-6 h-6">Home
                         </a>
                     </li>
                     <li>
@@ -51,14 +83,14 @@
     </div>
 
     <!-- HOME -->
-    <div class="flex flex-col md:flex-row justify-between h-[615px] bg-[#0a192f] " id="Home" >
+    <div class="flex flex-col md:flex-row justify-between h-[615px] sm:w-full bg-[#0a192f]" id="Home">
         <div class="w-full sm:w-[50%] h-[auto] lg:pl-20 lg:py-14 md:py-7 md:px-3 flex flex-col lg:-mt-20 justify-center items-center">
             <ul id="shiv" class="mr-4 md:mr-0">
-                <li style="--clr:#ffd700" id="ans" class="flex items-center" >
+                <li style="--clr:#ffd700" id="ans" class="flex items-center">
                     <a href="#" data-text="&nbsp;Hey It's Me" id="hi" class="mt-2 font-mono font-bold text-xl md:text-2xl">&nbsp;Hey It's Me&nbsp;</a>
                 </li>
             </ul>
-            <div class="flex flex-col items-center justify-center p-4 md:p-0 sm:mt-xl   ">
+            <div class="flex flex-col items-center justify-center p-4 md:p-0 sm:mt-xl">
                 <div class="mt-1 md:mt-0 text-4xl font-bold font-mono text-center md:text-left">
                     <span class="text-white">Shivansh Keshri</span>
                 </div>
@@ -68,19 +100,16 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify- w-full md:w- h-[500px] mt-10 bg-[#0a192f] px-14">
-            <img src="./images/Code typing (1).gif" alt="Code typing gif" class="w- h-auto">
+        <div class="flex justify-center w-full md:w-full h-[500px] mt-10 bg-[#0a192f] px-14">
+            <img src="./images/Code typing (1).gif" alt="Code typing gif" class="w-full h-auto">
         </div>
     </div>
 
     <!-- ABOUT -->
     <div class="w-full h-auto bg-[#0a192f] flex flex-col md:flex-row justify-center items-center p-4 gap-5" id="About">
-        <!-- <div class="w-full md:w-[30%] h-96 md:h-[400px] mt-10 md:mt-0 flex justify-center items-center">
-            <div id="box"></div>
-        </div> -->
         <div class="w-full md:w-[30%] h-96 md:h-[450px] mt-10 md:mt-0 flex justify-center items-center rounded-full relative">
             <div id="rotating-border" class="w-full h-full rounded-[50%] border-dashed border-[#ffd700] border-[5px] absolute"></div>
-            <div id="image-container" class="absolute">
+            <div id="image-container" class="absolute flex">
                 <img src="./images/WhatsApp_Image_2024-06-08_at_6.56.51_PM-removebg-preview.png" alt="" id="image">
             </div>
         </div>
@@ -107,7 +136,7 @@
                 <span class="text-[32px] md:text-[44px] text-white font-bold">My <span class="text-[#ffd700]">Skills</span></span>
             </div>
             <div class="flex flex-col md:flex-row justify-center gap-10 mt-10">
-                <div class="w-full md:w-[300px] h-64 bg-[#060f1c] rounded-lg hover:-translate-y-6 duration-300 p-4">
+                <div class="w-full md:w-[300px] sm:h-[264px] bg-[#060f1c] rounded-lg hover:-translate-y-6 duration-300 p-4">
                     <div class="flex justify-center">
                         <p class="text-2xl font-semibold text-[#ffd700] mt-1 mb-8">Frontend</p>
                     </div>
