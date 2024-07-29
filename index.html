@@ -20,38 +20,36 @@
             box-sizing: border-box;
         }
 
-        /* Custom styles for the navbar to ensure it fits within the screen width */
-        nav ul {
+        /* nav ul {
             padding: 0;
             margin: 0;
             list-style: none;
             display: flex;
             flex-wrap: wrap;
-        }
+        } */
 
-        nav ul li {
+        /* nav ul li {
             flex: 1;
-            min-width: 50px; /* Ensures each item is at least 50px wide */
-        }
+            min-width: 50px;
+        } */
 
-        /* Media query to adjust the elements for smaller screens */
-        @media (max-width: 640px) {
+        /* @media (max-width: 640px) {
             .flex-col {
                 flex-direction: column;
             }
-        }
+        } */
     </style>
 </head>
-<body class="w-full">
+<body class="w-full overflow-x-hidden">
     <!-- HEADER -->
     <div class="w-full h-20 px-4 bg-[#0a192f]">
-        <div class="h-full mx-auto py-1 px-6 font-titleFont flex items-center justify-between md:flex-row">
+        <div class="h-full mx-auto py-1 px-6 font-titleFont flex items-center justify-end md:flex-row">
             <div class="w-auto h-auto lg:ml-10 md:ml-5 flex items-center justify-center">
                 <img src="./images/letter-s.png" alt="S" class="w-10 h-10">
                 <img src="./images/letter-k.png" alt="K" class="w-10 h-10">
             </div>
             <nav class="text-base lg:pr-32 sm:pr-5 md:pr-8 w-full">
-                <ul class="flex lg:gap-8 sm:gap-2 text-[#fff]">
+                <ul class="flex flex-wrap lg:gap-8 sm:gap-2 text-[#fff] justify-end">
                     <li>
                         <a href="#Home" class="font-bold flex justify-center items-center gap-1 relative text-[#fff] text-base hover:text-[#ffd700] hover:after:w-full after:absolute after:bg-[#ffd700] after:h-[4.5px] after:w-0 after:left-0 after:bottom-[-8px] after:duration-500 after:rounded-full">
                             <img src="./images/icons8-home-48.png" alt="Home" class="w-6 h-6">Home
@@ -81,6 +79,7 @@
             </nav>
         </div>
     </div>
+    
 
     <!-- HOME -->
     <div class="flex flex-col md:flex-row justify-between h-[615px] sm:w-full bg-[#0a192f]" id="Home">
@@ -188,19 +187,115 @@
         </div>
     </div>
     <!-- Projects -->
-    <div class="w-full h-auto bg-[#0a192f] flex flex-col justify-center p-4" id="About">
+    <div class="w-full h-auto bg-[#0a192f] flex flex-col justify-center p-4" id="Projects">
         <div class="w-full h-auto">
             <div class="flex flex-col md:flex-row justify-center">
                 <span class="text-3xl md:text-[44px] font-semibold text-white font-mono text-center md:text-left">My<span class="text-[#ffd700]"> Projects</span></span>
             </div>
         </div>
-        <div class="w-full h-[700px] bg- mt-10 flex justify-center items-center">
-            <div class="w-[95%] h-full bg--300 ">
-                <div class="flex flex-col items- gap-5">
-                    
+        <div class="w-full h-auto mt-10 flex justify-center items-center">
+            <div class="w-full h-auto flex flex-col items-center gap-20 md:gap-10">
+                <!-- Project Card -->
+                <div class="w-[90%] md:w-2/3 lg:w-1/2 h-auto rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row gap-5">
+                    <!-- Left side: Project Image -->
+                    <div class="w-full md:w-[50%] h-60 md:h-auto p-4 md:p-0">
+                        <a href="https://bookchor-clone.netlify.app">
+                            <img src="./images/bookcor.png" alt="Project Image" class="w-full h-full object-cover rounded-md">
+                        </a>
+                    </div>
+                    <!-- Right side: Project Details -->
+                    <div class="w-full md:w-[50%] p-4 md:p-6 flex flex-col justify-center">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl md:text-3xl flex gap-2 font-semibold text-[#fff] mb-2">BookChor | <a href="https://bookchor-clone.netlify.app" class="text-[#ffd700] flex items-center"><span>WebPage</span> <img src="./images/icons8-share-64.png" alt="" class="w-6 md:w-10"></a></h2>
+                        </div>
+                        <p class="text-[#ccd6f6] text-sm md:text-base font-medium leading-relaxed mt-2 rounded-md">
+                            This is a brief description of the project. It explains what the project is about, the technologies used, and any other relevant information.
+                            <br><br>
+                            <span class="w-full h-5 gap-1 mt-3 flex items-center font-medium text-[#fff]">
+                                <img src="./images/html.svg" class="w-6" alt="">HTML | 
+                                <img src="./images/tailwindcss-icon.svg" class="w-6" alt="">&nbsp;TailwindCss |
+                            </span>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="w-[90%] md:w-2/3 lg:w-1/2 h-auto rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row gap-5">
+                    <!-- Right side: Project Details -->
+                    <div class="w-full md:w-[50%] p-4 md:p-6 flex flex-col justify-center">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl md:text-3xl flex gap-2 font-semibold text-[#fff] mb-2">Discord | <a href="https://discordd-clonee.netlify.app" class="text-[#ffd700] flex items-center"><span>WebPage</span> <img src="./images/icons8-share-64.png" alt="" class="w-6 md:w-10"></a></h2>
+                        </div>
+                        <p class="text-[#ccd6f6] text-sm md:text-base font-medium leading-relaxed mt-2 rounded-md">
+                            This is a brief description of the project. It explains what the project is about, the technologies used, and any other relevant information.
+                            <br><br>
+                            <span class="w-full h-5 gap-1 mt-3 flex items-center font-medium text-[#fff]">
+                                <img src="./images/html.svg" class="w-6" alt="">HTML | 
+                                <img src="./images/tailwindcss-icon.svg" class="w-6" alt="">&nbsp;TailwindCss |
+                            </span>
+                        </p>
+                    </div>
+                    <!-- Left side: Project Image -->
+                    <div class="w-full md:w-[50%] h-60 md:h-auto p-4 md:p-0">
+                        <a href="https://discordd-clonee.netlify.app">
+                            <img src="./images/discord.png" alt="Project Image" class="w-full h-full object-cover rounded-md">
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="w-[90%] md:w-2/3 lg:w-1/2 h-auto rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row gap-5">
+                    <!-- Left side: Project Image -->
+                    <div class="w-full md:w-[50%] h-60 md:h-auto p-4 md:p-0">
+                        <a href="https://flipkarrt-clone.netlify.app/">
+                            <img src="./images/flipkart.png" alt="Project Image" class="w-full h-full object-cover rounded-md">
+                        </a>
+                    </div>
+                    <!-- Right side: Project Details -->
+                    <div class="w-full md:w-[50%] p-4 md:p-6 flex flex-col justify-center">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl md:text-3xl flex gap-2 font-semibold text-[#fff] mb-2">Flipkart | <a href="https://flipkarrt-clone.netlify.app/" class="text-[#ffd700] flex items-center"><span>WebPage</span> <img src="./images/icons8-share-64.png" alt="" class="w-6 md:w-10"></a></h2>
+                        </div>
+                        <p class="text-[#ccd6f6] text-sm md:text-base font-medium leading-relaxed mt-2 rounded-md">
+                            This is a brief description of the project. It explains what the project is about, the technologies used, and any other relevant information.
+                            <br><br>
+                            <span class="w-full h-5 gap-1 mt-3 flex items-center font-medium text-[#fff]">
+                                <img src="./images/html.svg" class="w-6" alt="">HTML | 
+                                <img src="./images/css.svg" class="w-6" alt="">Css |
+                            </span>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="w-[90%]  md:w-2/3 lg:w-1/2 h-auto bg-[#1e293b] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row gap-5">
+                    <!-- Right side: Project Details -->
+                    <div class="w-full md:w-[50%] p-4 md:p-6 flex flex-col justify-center">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl md:text-3xl flex gap-2 font-semibold text-[#fff] mb-2">Netflix | <a href="https://netflix-login.netlify.app" class="text-[#ffd700] flex items-center"><span>WebPage</span> <img src="./images/icons8-share-64.png" alt="" class="w-6 md:w-10"></a></h2>
+                        </div>
+                        <p class="text-[#ccd6f6] text-sm md:text-base font-medium leading-relaxed mt-2 rounded-md">
+                            This is a brief description of the project. It explains what the project is about, the technologies used, and any other relevant information.
+                            This is a brief description of the project. It explains what the project is about, the technologies used, and any other relevant information.
+                            This is a brief description of the project. It explains what the project is about, the technologies used, and any other relevant information.
+                            <br><br>
+                            <span class="w-full h-5 gap-1 mt-3 flex items-center font-medium text-[#fff]">
+                                <img src="./images/html.svg" class="w-6" alt="">HTML | 
+                                <img src="./images/css.svg" class="w-6" alt="">Css |
+                            </span>
+                        </p>
+                    </div>
+                    <!-- Left side: Project Image -->
+                    <div class="w-full md:w-[50%] h-60 md:h-auto p-4 md:p-0">
+                        <a href="https://netflix-login.netlify.app">
+                            <img src="./images/netflix.png" alt="Project Image" class="w-full h-full object-cover rounded-md">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    
+    
+    
+    
+    
 </body>
 </html>
